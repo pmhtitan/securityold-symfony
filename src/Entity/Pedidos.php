@@ -87,5 +87,118 @@ class Pedidos
      */
     private $usuario;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getProvincia(): ?string
+    {
+        return $this->provincia;
+    }
+
+    public function setProvincia(?string $provincia): self
+    {
+        $this->provincia = $provincia;
+
+        return $this;
+    }
+
+    public function getLocalidad(): ?string
+    {
+        return $this->localidad;
+    }
+
+    public function setLocalidad(?string $localidad): self
+    {
+        $this->localidad = $localidad;
+
+        return $this;
+    }
+
+    public function getDireccion(): ?string
+    {
+        return $this->direccion;
+    }
+
+    public function setDireccion(?string $direccion): self
+    {
+        $this->direccion = $direccion;
+
+        return $this;
+    }
+
+    public function getCodigoPostal(): ?int
+    {
+        return $this->codigoPostal;
+    }
+
+    public function setCodigoPostal(?int $codigoPostal): self
+    {
+        $this->codigoPostal = $codigoPostal;
+
+        return $this;
+    }
+
+    public function getCoste(): ?float
+    {
+        return $this->coste;
+    }
+
+    public function setCoste(?float $coste): self
+    {
+        $this->coste = $coste;
+
+        return $this;
+    }
+
+    public function getEstado(): ?string
+    {
+        return $this->estado;
+    }
+
+    public function setEstado(?string $estado): self
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getUsuario(): ?Users
+    {
+        return $this->usuario;
+    }
+
+    public function setUsuario(?Users $usuario): self
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
 
 }

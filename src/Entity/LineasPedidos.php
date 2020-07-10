@@ -62,5 +62,70 @@ class LineasPedidos
      */
     private $producto;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getUnidades(): ?int
+    {
+        return $this->unidades;
+    }
+
+    public function setUnidades(?int $unidades): self
+    {
+        $this->unidades = $unidades;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getPedido(): ?Pedidos
+    {
+        return $this->pedido;
+    }
+
+    public function setPedido(?Pedidos $pedido): self
+    {
+        $this->pedido = $pedido;
+
+        return $this;
+    }
+
+    public function getProducto(): ?Productos
+    {
+        return $this->producto;
+    }
+
+    public function setProducto(?Productos $producto): self
+    {
+        $this->producto = $producto;
+
+        return $this;
+    }
+
 
 }
