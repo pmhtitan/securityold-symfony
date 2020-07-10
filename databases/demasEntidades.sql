@@ -7,8 +7,12 @@ USE security_symfony;
 
 CREATE TABLE IF NOT EXISTS users (
 id          int(255) AUTO_INCREMENT NOT NULL,
-role        varchar(50),
-
+role        varchar(50) NOT NULL,
+email       varchar(100) NOT NULL UNIQUE,
+created_at  datetime,
+updated_at  datetime,
+remember_token  varchar(255),
+CONSTRAINT pk_users PRIMARY KEY(id)
 )ENGINE=InnoDb;
 
 CREATE TABLE IF NOT EXISTS categorias (
