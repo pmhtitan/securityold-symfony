@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
 id          int(255) AUTO_INCREMENT NOT NULL,
 role        varchar(50) NOT NULL,
 email       varchar(100) NOT NULL UNIQUE,
+password    varchar(255) NOT NULL,
 created_at  datetime,
 updated_at  datetime,
 remember_token  varchar(255),
@@ -61,3 +62,18 @@ CONSTRAINT pk_lineas_pedidos PRIMARY KEY(id),
 CONSTRAINT fk_lineasPed_pedidos FOREIGN KEY(pedido_id) REFERENCES pedidos(id),
 CONSTRAINT fk_lineasPed_productos FOREIGN KEY(producto_id) REFERENCES productos(id)
 )ENGINE=InnoDb;
+
+--DUMMY DATOS
+
+INSERT INTO users VALUES (1,'ROLE_ADMIN', 'admin@admin.com', CURDATE(), CURDATE(), null);
+INSERT INTO users VALUES (2,'ROLE_USER', 'user@user.com', CURDATE(), CURDATE(), null);
+
+INSERT INTO categorias VALUES (1, 'camisetas');
+INSERT INTO categorias VALUES (2, 'zapatos');
+
+INSERT INTO productos VALUES (1, 1, 'T-Shirt', 'Ropa de verano', 25.5, 50, 'tshirt.png', CURDATE(), CURDATE());
+INSERT INTO productos VALUES (2, 1, 'Chaqueta', 'Ropa de invierno', 40, 100, 'chaqueta.png', CURDATE(), CURDATE());
+INSERT INTO productos VALUES (3, 2, 'Mocasines', 'Zapatos elegantes', 80.5, 10, 'mocasines.png', CURDATE(), CURDATE());
+INSERT INTO productos VALUES (4, 2, 'Zapatillas Running', 'Calzado deportivo', 47.30, 25, 'tshirt.png', CURDATE(), CURDATE());
+
+INSERT INTO pedidos
