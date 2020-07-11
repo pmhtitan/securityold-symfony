@@ -34,7 +34,7 @@ estado      varchar(50),
 created_at  datetime,
 updated_at  datetime,
 CONSTRAINT pk_pedidos PRIMARY KEY(id),
-CONSTRAINT fk_pedidos_usuarios FOREIGN KEY(usuario_id) REFERENCES user(id)
+CONSTRAINT fk_pedidos_usuarios FOREIGN KEY(usuario_id) REFERENCES users(id)
 )ENGINE=InnoDb;
 
 CREATE TABLE IF NOT EXISTS productos (
